@@ -36,6 +36,7 @@ export async function fetcher<T>(
     if (!response.ok) {
         const errorBody: CoinGeckoErrorBody = await response.json().catch(() => ({}));
 
+
         throw new Error(`API Error: ${response.status}: ${errorBody.error || response.statusText} `);
     }
 
