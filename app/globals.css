@@ -221,6 +221,75 @@
   }
 }
 
+.home-grid {
+  @apply grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 items-start lg:items-center gap-6;
+}
+
+#coin-overview {
+  @apply w-full h-full xl:col-span-2 px-2 bg-dark-500 rounded-xl;
+
+  .header {
+    @apply flex-1 mb-2 flex gap-2 md:gap-3;
+
+    img {
+      @apply w-10 h-10 md:w-14 md:h-14;
+    }
+
+    .info {
+      @apply flex flex-col;
+
+      p {
+        @apply flex text-purple-100 text-xs md:text-sm w-fit;
+      }
+
+      h1 {
+        @apply text-xl md:text-2xl font-semibold;
+      }
+    }
+  }
+}
+
+#trending-coins {
+  @apply w-full flex flex-col justify-center h-full py-4 bg-dark-500 rounded-xl;
+
+  h4 {
+    @apply text-xl md:text-2xl font-semibold mb-2 px-5;
+  }
+
+  .trending-coins-table {
+    @apply bg-dark-500 overflow-hidden;
+
+    .name-cell {
+      @apply font-bold;
+
+      a {
+        @apply pl-1 md:pl-2 py-1 md:py-2 xl:py-1 flex items-center gap-2 md:gap-3;
+
+        img {
+          @apply rounded-full size-8 md:size-9;
+        }
+
+        p {
+          @apply text-sm md:text-base;
+        }
+      }
+    }
+
+    .change-cell {
+      @apply font-medium py-4 pr-3 md:pr-5;
+    }
+
+    .price-cell {
+      @apply font-bold pr-5 text-sm max-w-full truncate;
+    }
+
+    .price-change {
+      @apply flex gap-1 items-center text-sm font-medium;
+    }
+  }
+}
+
+
 /* #candlestick-chart {
     @apply p-3 mt-5 rounded-lg bg-dark-500;
 
@@ -329,49 +398,8 @@
     }
   }
 
-  #trending-coins {
-    @apply w-full flex flex-col justify-center h-full py-4 bg-dark-500 rounded-xl;
-
-    h4 {
-      @apply text-xl md:text-2xl font-semibold mb-2 px-5;
-    }
-
-    .trending-coins-table {
-      @apply bg-dark-500 overflow-hidden;
-
-      .name-cell {
-        @apply font-bold;
-
-        a {
-          @apply pl-1 md:pl-2 py-1 md:py-2 xl:py-1 flex items-center gap-2 md:gap-3;
-
-          img {
-            @apply rounded-full size-8 md:size-9;
-          }
-
-          p {
-            @apply text-sm md:text-base;
-          }
-        }
-      }
-
-      .change-cell {
-        @apply font-medium py-4 pr-3 md:pr-5;
-      }
-
-      .price-cell {
-        @apply font-bold pr-5 text-sm max-w-full truncate;
-      }
-
-      .price-change {
-        @apply flex gap-1 items-center text-sm font-medium;
-      }
-    }
-  }
-
-  .home-grid {
-    @apply grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 items-start lg:items-center gap-6;
-  }
+ 
+  
 
   #categories-fallback {
     @apply pt-8 mt-5 w-full bg-dark-500 rounded-xl overflow-hidden;

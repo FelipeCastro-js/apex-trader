@@ -8,9 +8,9 @@ function Header() {
     const pathName = usePathname();
     return (
         <header>
-            <div className="main container inner">
+            <div className="inner px-4 sm:px-6 max-w-360 mx-auto">
                 <Link href="/">
-                    <Image src="/logo.png" alt="Logo" width={180} height={60} priority style={{ width: '180px', height: 'auto' }} />
+                    <Image src="/logo.png" alt="Logo" width={140} height={40} priority style={{ width: '140px', height: 'auto' }} />
                 </Link>
                 <nav>
                     <Link href="/" className={cn('nav-link', {
